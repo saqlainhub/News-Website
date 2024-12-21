@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - News Website</title>
+    <script src="https://kit.fontawesome.com/fc68ea6cad.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d8c9c9;
+        }
+
+       
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+
+        .search-bar button {
+            background-color: #4CAF50;
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 10px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+        }
+
+        .search-bar button i {
+            font-size: 16px;
+        }
+        .search-bar button:hover {
+            background-color: #c5b8b8;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        section h2 {
+            color: #302525;
+            margin-bottom: 20px;
+            font-size: 30px;
+            text-align: center;
+
+        }
+
+        .collapsible {
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: left;
+            outline: none;
+            width: 100%;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            font-size: 18px;
+            float: right;
+        }
+
+        .collapsible.active:after {
+            content: "\2212";
+        }
+
+        .collapsible-content {
+            padding: 0 15px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            border-left: 3px solid #4CAF50;
+        }
+
+        .collapsible-content p {
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            main {
+                padding: 15px;
+            }
+
+            header, footer {
+                padding: 10px 15px;
+            }
+
+            .search-bar input[type="text"] {
+                width: 70%;
+            }
+
+            section h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+<main>
+    <h1>How Can We Assist You?</h1>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search news, topics, or questions...">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <!-- FAQ Section -->
+    <section>
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <!-- Start of FAQ Questions and Answers -->
+
+        <button class="collapsible">1. How do I create a new account?</button>
+        <div class="collapsible-content">
+            <p>You can sign up by clicking the "Sign Up" button on the top right corner and following the instructions. You’ll need to provide a valid email address and create a password.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">2. How do I reset my password?</button>
+        <div class="collapsible-content">
+            <p>Click on "Forgot Password" at the login screen and follow the prompts. We’ll send a reset link to your registered email.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">3. How can I find the latest news articles?</button>
+        <div class="collapsible-content">
+            <p>The homepage features the latest and trending news articles. You can also use the search bar to find specific articles or browse by categories like Politics, Sports, Technology, and more.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">4. How do I subscribe to premium content?</button>
+        <div class="collapsible-content">
+            <p>Visit the "Subscription Plans" page to choose a plan that suits you. Follow the payment process to unlock premium features like exclusive articles and ad-free browsing.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">5. How do I share news articles on social media?</button>
+        <div class="collapsible-content">
+            <p>Every article includes share buttons for platforms like Facebook, Twitter, LinkedIn, and more. You can also copy the article’s link to share it manually.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">6. How do I report inaccurate or misleading content?</button>
+        <div class="collapsible-content">
+            <p>If you spot an error or misleading information in an article, use the "Report Issue" button at the bottom of the article to notify our editorial team.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">7. Why is the website loading slowly?</button>
+        <div class="collapsible-content">
+            <p>Slow loading could be due to heavy traffic or network issues. Try refreshing the page, checking your internet connection, or switching to a different browser.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">8. What payment methods do you accept for subscriptions?</button>
+        <div class="collapsible-content">
+            <p>We accept major credit cards, PayPal, and other payment options depending on your region.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">9. How do I manage my newsletter subscriptions?</button>
+        <div class="collapsible-content">
+            <p>Under "Account Settings", you can manage which newsletters you want to receive or unsubscribe from any email lists.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">10. What is your policy on correcting errors?</button>
+        <div class="collapsible-content">
+            <p>If we find or are informed of an error, we immediately update the article and include a correction note at the bottom of the article.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">11. How do I cancel my subscription?</button>
+        <div class="collapsible-content">
+            <p>You can cancel your subscription anytime under "Subscription Settings". Your access will continue until the end of your billing period.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">12. How do I submit a news tip or story idea?</button>
+        <div class="collapsible-content">
+            <p>You can submit news tips or story ideas through our "Contact Us" page or by emailing our editorial team directly.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">13. How do I change my account email address?</button>
+        <div class="collapsible-content">
+            <p>Go to "Account Settings" and update your email address. You may need to verify your new email for the changes to take effect.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">14. Can I download articles for offline reading?</button>
+        <div class="collapsible-content">
+            <p>Yes, premium members can download select articles for offline reading through our mobile app.</p>
+        </div>
+
+        <br> <!-- Line Break Between Questions -->
+
+        <button class="collapsible">15. How do I contact customer support?</button>
+        <div class="collapsible-content">
+            <p>You can reach our customer support team via the "Contact Us" page, or by emailing support@newswebsite.com.</p>
+        </div>
+
+        <!-- Repeat similar blocks for more questions -->
+    </section>
+</main>
+
+<footer>
+    &copy; 2024 SaqlainITHub. All Rights Reserved.
+</footer>
+
+<script>
+    // JavaScript for Collapsible FAQ
+    const collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach(collapsible => {
+        collapsible.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>

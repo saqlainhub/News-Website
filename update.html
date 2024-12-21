@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website Update Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Horizontal Scroll */
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 10px;
+            gap: 15px;
+        }
+
+        .horizontal-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Post Card */
+        .video-card, .live-video-card {
+            min-width: 250px;
+            flex: 0 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            scroll-snap-align: start;
+            text-align: center;
+        }
+        .post-card {
+            max-width: 200px;
+            flex: 0 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            scroll-snap-align: start;
+            text-align: center;
+        }
+        .channel-card {
+            min-width: 150px;
+            flex: 0 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            scroll-snap-align: start;
+            text-align: center;
+        }
+
+        .post-card:hover, .video-card:hover, .live-video-card:hover, .channel-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .video-card img, .live-video-card img, .channel-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+        .post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-card h3, .video-card h3, .live-video-card h3, .channel-card h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .post-card p, .video-card p, .live-video-card p {
+            font-size: 14px;
+            color: #666;
+            padding: 0 10px;
+        }
+
+        .follow-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+            width: 90%;
+        }
+
+        .follow-button:hover {
+            background-color: #0056b3;
+        }
+
+        .load-more {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #e0e0e0;
+            color: rgb(114, 57, 57);
+            border: 1px solid #bdbcbc;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .load-more:hover {
+            background-color: #d1d1d1;
+        }
+
+        /* Sections */
+        section {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Blogs Section -->
+    <section class="section-blogs">
+        <h2>Latest Blogs</h2>
+        <div class="horizontal-scroll">
+            <div class="post-card">
+                <img src="images/aaa.jfif" alt="Post Image">
+                <h3>Blog Title 1</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/bbb.jfif" alt="Post Image">
+                <h3>Blog Title 2</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/ccc.jfif" alt="Post Image">
+                <h3>Blog Title 3</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/ddd.jfif" alt="Post Image">
+                <h3>Blog Title 1</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/aaa.jfif" alt="Post Image">
+                <h3>Blog Title 2</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/bbb.jfif" alt="Post Image">
+                <h3>Blog Title 3</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/ccc.jfif" alt="Post Image">
+                <h3>Blog Title 1</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/ddd.jfif" alt="Post Image">
+                <h3>Blog Title 2</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/aaa.jfif" alt="Post Image">
+                <h3>Blog Title 3</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/bbb.jfif" alt="Post Image">
+                <h3>Blog Title 1</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/ccc.jfif" alt="Post Image">
+                <h3>Blog Title 2</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+            <div class="post-card">
+                <img src="images/ddd.jfif" alt="Post Image">
+                <h3>Blog Title 3</h3>
+                <p>Short description of the blog post...</p>
+            </div>
+        </div>
+        <button class="load-more">More Blogs...</button>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="section-videos">
+        <h2>Latest Videos</h2>
+        <div class="horizontal-scroll">
+            <div class="video-card">
+                <img src="images/4.jfif" alt="Video Thumbnail">
+                <h3>Video Title 1</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/5.jfif" alt="Video Thumbnail">
+                <h3>Video Title 2</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/6.jfif" alt="Video Thumbnail">
+                <h3>Video Title 3</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/4.jfif" alt="Video Thumbnail">
+                <h3>Video Title 1</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/5.jfif" alt="Video Thumbnail">
+                <h3>Video Title 2</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/6.jfif" alt="Video Thumbnail">
+                <h3>Video Title 3</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/4.jfif" alt="Video Thumbnail">
+                <h3>Video Title 1</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/5.jfif" alt="Video Thumbnail">
+                <h3>Video Title 2</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/6.jfif" alt="Video Thumbnail">
+                <h3>Video Title 3</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/4.jfif" alt="Video Thumbnail">
+                <h3>Video Title 1</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/5.jfif" alt="Video Thumbnail">
+                <h3>Video Title 2</h3>
+            </div>
+            <div class="video-card">
+                <img src="images/6.jfif" alt="Video Thumbnail">
+                <h3>Video Title 3</h3>
+            </div>
+        </div>
+        <button class="load-more">More Videos...</button>
+    </section>
+
+    <!-- Live Videos Section -->
+    <section class="section-live-videos">
+        <h2>Live Videos</h2>
+        <div class="horizontal-scroll">
+            <div class="live-video-card">
+                <img src="images/aa.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 1</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/bb.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 2</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/cc.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 3</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/aa.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 1</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/bb.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 2</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/cc.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 3</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/aa.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 1</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/bb.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 2</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/cc.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 3</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/aa.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 1</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/bb.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 2</h3>
+            </div>
+            <div class="live-video-card">
+                <img src="images/cc.jfif" alt="Live Video Thumbnail">
+                <h3>Live Video Title 3</h3>
+            </div>
+        </div>
+        <button class="load-more">More Live Videos...</button>
+    </section>
+
+    <!-- Channels Section -->
+    <section class="section-channels">
+        <h2>Top Channels</h2>
+        <div class="horizontal-scroll">
+            <div class="channel-card">
+                <img src="images/c.png" alt="Channel Logo">
+                <h3>Channel Name 1</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/d.jfif" alt="Channel Logo">
+                <h3>Channel Name 2</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/e.jfif" alt="Channel Logo">
+                <h3>Channel Name 3</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/c.png" alt="Channel Logo">
+                <h3>Channel Name 1</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/d.jfif" alt="Channel Logo">
+                <h3>Channel Name 2</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/e.jfif" alt="Channel Logo">
+                <h3>Channel Name 3</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/c.png" alt="Channel Logo">
+                <h3>Channel Name 1</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/d.jfif" alt="Channel Logo">
+                <h3>Channel Name 2</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/e.jfif" alt="Channel Logo">
+                <h3>Channel Name 3</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/c.png" alt="Channel Logo">
+                <h3>Channel Name 1</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/d.jfif" alt="Channel Logo">
+                <h3>Channel Name 2</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+            <div class="channel-card">
+                <img src="images/e.jfif" alt="Channel Logo">
+                <h3>Channel Name 3</h3>
+                <button class="follow-button">Follow</button>
+            </div>
+        </div>
+        <button class="load-more">More Channels...</button>
+    </section>
+
+    <script>
+        // JavaScript for "Load More" functionality (placeholder functionality)
+        document.querySelectorAll('.load-more').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Loading more content...');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

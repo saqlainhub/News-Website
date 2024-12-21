@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Responsive Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #d8c9c9;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .settings-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 100vh;
+            
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align:center;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+            
+        }
+
+        .setting-section {
+            margin-bottom: 30px;
+        }
+
+        .setting-section label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .setting-section input[type="text"],
+        .setting-section input[type="email"],
+        .setting-section input[type="password"],
+        .setting-section input[type="tel"],
+        .setting-section select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        .setting-section input:focus,
+        .setting-section select:focus {
+            border-color: #007bff;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            align-items: center;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .tab.active {
+            background-color: #007bff;
+            color: #fff;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .tab:hover {
+            background-color: #e0e0e0;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .logout-btn,
+        .delete-account-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .logout-btn:hover,
+        .delete-account-btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .setting-section {
+                padding: 10px;
+            }
+
+            .tabs {
+                border-bottom: none;
+            }
+
+            .tab {
+                border-bottom: 1px solid #ccc;
+            }
+
+            .tab.active {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="settings-container">
+        <h2>Settings</h2>
+        <div class="tabs">
+            <div class="tab active" data-target="general-settings">General</div>
+            <div class="tab" data-target="notification-settings">Notifications</div>
+            <div class="tab" data-target="preferences-settings">Preferences</div>
+            <div class="tab" data-target="account-settings">Account</div>
+            <div class="tab" data-target="privacy-settings">Security</div>
+            <div class="tab" data-target="display-settings">Appearance</div>
+        </div>
+
+        <div id="general-settings" class="setting-section">
+            <h3>Language Settings</h3>
+            <label for="language">Select Your Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh">Chinese</option>
+                <option value="hi">Hindi</option>
+                <option value="ar">Arabic</option>
+                <option value="jp">Japanese</option>
+            </select>
+        </div>
+
+        <div id="notification-settings" class="setting-section" style="display: none;">
+            <h3>Notification Settings</h3>
+            <div class="checkbox-group">
+                <input type="checkbox" id="email-notifications">
+                <label for="email-notifications">Enable email notifications</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="push-notifications">
+                <label for="push-notifications">Enable push notifications</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="sms-notifications">
+                <label for="sms-notifications">Enable SMS notifications</label>
+            </div>
+        </div>
+
+        <div id="preferences-settings" class="setting-section" style="display: none;">
+            <h3>Content Preferences</h3>
+            <div class="checkbox-group">
+                <input type="checkbox" id="tech-content">
+                <label for="tech-content">Technology</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="sports-content">
+                <label for="sports-content">Sports</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="politics-content">
+                <label for="politics-content">Politics</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="health-content">
+                <label for="health-content">Health</label>
+            </div>
+        </div>
+
+        <div id="account-settings" class="setting-section" style="display: none;">
+            <h3>Account Management</h3>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username">
+
+            <label for="email" style="margin-top: 20px;">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="phone" style="margin-top: 20px;">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+
+            <label for="password" style="margin-top: 20px;">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+
+            <label for="new-password" style="margin-top: 20px;">New Password:</label>
+            <input type="password" id="new-password" placeholder="Enter your new password">
+
+            <label for="confirm-password" style="margin-top: 20px;">Confirm Password:</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your new password">
+
+            <button class="logout-btn" onclick="logout()">Logout</button>
+            <button class="delete-account-btn" onclick="deleteAccount()">Delete Account</button>
+        </div>
+
+        <div id="privacy-settings" class="setting-section" style="display: none;">
+            <h3>Privacy & Security Settings</h3>
+            <div class="checkbox-group">
+                <input type="checkbox" id="show-profile-picture">
+                <label for="show-profile-picture">Show my profile picture to others</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="share-activity-status">
+                <label for="share-activity-status">Share my activity status</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="enable-2fa">
+                <label for="enable-2fa">Enable Two-Factor Authentication (2FA)</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="data-sharing-consent">
+                <label for="data-sharing-consent">Consent to data sharing with third parties</label>
+            </div>
+        </div>
+
+        <div id="display-settings" class="setting-section" style="display: none;">
+            <h3>Display & Appearance</h3>
+            <div class="checkbox-group">
+                <input type="checkbox" id="dark-mode" onclick="toggleDarkMode()">
+                <label for="dark-mode">Enable Dark Mode</label>
+            </div>
+            <label for="theme">Select Theme:</label>
+            <select id="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="contrast">High Contrast</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.setting-section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.getElementById(tab.dataset.target).style.display = 'block';
+            });
+        });
+
+        function logout() {
+            alert('You have been logged out.');
+            // Add your logout logic here, like redirecting to a login page.
+            window.location.href = 'login.html'; // Replace with your actual login page.
+        }
+
+        function deleteAccount() {
+            if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+                alert('Your account has been deleted.');
+                // Add your delete account logic here.
+                window.location.href = 'signup.html'; // Replace with your actual signup page.
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        document.body.classList.add('dark-mode'); // You can set this based on user's saved preference
+    </script>
+</body>
+
+</html>

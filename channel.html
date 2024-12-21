@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel 1 Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #25D366;
+            color: white;
+        }
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header .title {
+            flex-grow: 1;
+        }
+        .header .options {
+            cursor: pointer;
+            transform: rotate(90deg);
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .chat-container {
+            flex-grow: 1;
+            padding: 10px;
+            background-color: #ece5dd;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .chat-message {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .chat-message img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .chat-message p {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 70%;
+        }
+        .chat-input {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            border-top: 1px solid #ccc;
+        }
+        .chat-input input {
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .chat-input button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .media-icons {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .voice-icon {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="images/a.jfif" alt="Channel Logo">
+        <div class="title">Channel 1</div>
+        <div class="options">...</div>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-message">
+            <img src="images/i.png" alt="User">
+            <p>Hello! Welcome to Channel 1.</p>
+        </div>
+        <div class="chat-message">
+            <img src="images/e.jfif" alt="User">
+            <p>Feel free to ask any questions!</p>
+        </div>
+        <!-- More messages can be added here -->
+    </div>
+
+    <div class="chat-input">
+        <div class="media-icons">📷</div>
+        <input type="text" placeholder="Type a message...">
+        <button>Send</button>
+        <div class="voice-icon">🎙️</div>
+    </div>
+</body>
+</html>
